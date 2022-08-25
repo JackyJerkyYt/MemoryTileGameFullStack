@@ -1,0 +1,35 @@
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+}
+
+.content-table thead tr {
+    background-color: rgb(2, 40, 40);
+    text-align: left;
+    font-weight: bold;
+}
+   
+   
+.content-table td {
+    padding: 1px 15px;
+    text-align: left;
+}
+
+.content-table td input {
+    height: 30px;
+}
+
+.content-table td input[type=text] {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.content-table th {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid white;    
+}

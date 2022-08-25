@@ -1,0 +1,31 @@
+
+  
+  .card-grid1 {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    column-gap: 20px;
+  }
+  
+  .card-grid2 {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    column-gap: 20px;
+  }
+  
+  .card-grid3 {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    column-gap: 20px;
+  }
+  
+  div{ 
+    display:inline-block; 
+    padding:0px; 
+    margin-left:-4px; 
+  } 
