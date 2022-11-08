@@ -293,7 +293,7 @@ function Player() {
   return (
     <div className="App">
     
-      <h1 onClick = {testingHandleClick}>Are You a Gold Fish?</h1>
+      <h1 onClick = {testingHandleClick}>Are You a Gold Fish?!</h1>
       {
       
         lostmessage ? 
