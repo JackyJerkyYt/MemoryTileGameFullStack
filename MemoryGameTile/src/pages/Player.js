@@ -52,6 +52,7 @@ function Player() {
   const [userReadTheInstructions, setUserReadTheInstructins] = useState(false)
   const [lostmessage, setLostMessage] = useState(false)
   const [usersArray, setUsersArray] = useState([])
+  cosnt [isFetchingDataBase, setIsFetchingDataBase] = useState(true)
 
 
 
@@ -63,9 +64,18 @@ function Player() {
   //take away lives function
 
   useEffect(() => {
-    axios.get("https://fullstackmemorygame.herokuapp.com/user")
+    axios.get("https://fullstackmemorygame.herokuapp.com/user", 
+        {
+          onDownloadProgress: progressEvent => {
+            console.log("onUploadProgress")
+            setIsFetchingDataBase(true)
+          }
+        } 
+      )
       .then((res) => {
         setUsersArray(res.data)
+        setIsFetchingDataBase(false)
+        print("hello")
       })
   })
   const takeAwaysLives = () => {
@@ -293,7 +303,7 @@ function Player() {
   return (
     <div className="App">
     
-      <h1 onClick = {testingHandleClick}>Are You a Gold Fish?!</h1>
+      <h1 onClick = {testingHandleClick}>Are You a Gold Fish?</h1>
       {
       
         lostmessage ? 
@@ -341,9 +351,15 @@ function Player() {
             <div>
               <button onClick = {beginningClickHandler} >Start!</button>
             </div>
-            <br></br>
-            <Profiles Leaderboard={usersArray} />
-            
+            <br></br>          
+              {
+                isFetchingDataBase ? 
+                <div> Fetching leaderboard, please wait. </div>
+                :
+                <>
+                <Profiles Leaderboard={usersArray} />
+                </>
+              }
             </div>
         
       }
