@@ -52,7 +52,7 @@ function Player() {
   const [userReadTheInstructions, setUserReadTheInstructins] = useState(false)
   const [lostmessage, setLostMessage] = useState(false)
   const [usersArray, setUsersArray] = useState([])
-  cosnt [isFetchingDataBase, setIsFetchingDataBase] = useState(true)
+  const [isFetchingDataBase, setIsFetchingDataBase] = useState(true)
 
 
 
